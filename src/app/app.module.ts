@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CrearTutorialComponent } from './tutoriales/crear-tutorial/crear-tutorial.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CrearTutorialComponent
+    CrearTutorialComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
