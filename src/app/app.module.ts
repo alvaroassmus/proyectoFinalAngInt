@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CrearTutorialComponent } from './tutoriales/crear-tutorial/crear-tutorial.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { EditarTutorialComponent } from './tutoriales/editar-tutorial/editar-tutorial.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CrearTutorialComponent,
-    NavbarComponent
+    NavbarComponent,
+    EditarTutorialComponent
   ],
   imports: [
     BrowserModule,
