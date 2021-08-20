@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { CrearTutorialComponent } from './tutoriales/crear-tutorial/crear-tutorial.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { EditarTutorialComponent } from './tutoriales/editar-tutorial/editar-tutorial.component';
+import { ConsultarTutorialComponent } from './tutoriales/consultar-tutorial/consultar-tutorial.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CrearTutorialComponent,
     NavbarComponent,
-    EditarTutorialComponent
+    EditarTutorialComponent,
+    ConsultarTutorialComponent
   ],
   imports: [
     BrowserModule,
