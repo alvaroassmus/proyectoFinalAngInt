@@ -17,5 +17,15 @@ export class TutorialesService {
     this.listaTutoriales.push(tutorial);
     //TODO Hacer el metodo vagos
     return this.listaTutoriales;
+ 
+  
   }
+
+  public eliminarTutoriales(): TutorialDTO[] {
+      this.listaTutoriales.length = 0;
+      console.log(this.listaTutoriales);
+      
+     return this.listaTutoriales;
+  }
+
 }

@@ -20,6 +20,7 @@ export class ListaComponent implements OnInit {
   ngOnInit(): void {
     this.listaTutoriales = this.tutoService.cargarTutoriales();
     console.log(this.listaTutoriales);
+    
   }
 
   verDetalle(tutorial: TutorialDTO){

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TutorialesService } from 'src/app/servicios/tutoriales.service';
 
 @Component({
   selector: 'app-eliminar-todo',
@@ -7,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EliminarTodoComponent implements OnInit {
 
-  constructor() { }
+  constructor( private tutoService : TutorialesService) { }
 
   ngOnInit(): void {
   }
 
   eliminarTodo(){
-    
+    this.tutoService.eliminarTutoriales();    
   }
 
 }
