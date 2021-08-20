@@ -8,6 +8,10 @@ import { CrearTutorialComponent } from './tutoriales/crear-tutorial/crear-tutori
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { EditarTutorialComponent } from './tutoriales/editar-tutorial/editar-tutorial.component';
 import { ConsultarTutorialComponent } from './tutoriales/consultar-tutorial/consultar-tutorial.component';
+import { FiltroComponent } from './tutoriales/consultar-tutorial/filtro/filtro.component';
+import { ListaComponent } from './tutoriales/consultar-tutorial/lista/lista.component';
+import { DetalleComponent } from './tutoriales/consultar-tutorial/detalle/detalle.component';
+import { EliminarTodoComponent } from './tutoriales/consultar-tutorial/eliminar-todo/eliminar-todo.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { ConsultarTutorialComponent } from './tutoriales/consultar-tutorial/cons
     CrearTutorialComponent,
     NavbarComponent,
     EditarTutorialComponent,
-    ConsultarTutorialComponent
+    ConsultarTutorialComponent,
+    FiltroComponent,
+    ListaComponent,
+    DetalleComponent,
+    EliminarTodoComponent
   ],
   imports: [
     BrowserModule,
