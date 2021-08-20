@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-consultar-tutorial',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsultarTutorialComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ruta: ActivatedRoute) { }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { TutorialDTO } from 'src/app/modelos/tutorialDTO';
 
 @Component({
@@ -11,7 +12,7 @@ export class CrearTutorialComponent implements OnInit {
  public tutorial = new TutorialDTO();
 
 
- constructor() { }
+ constructor(private ruta: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
