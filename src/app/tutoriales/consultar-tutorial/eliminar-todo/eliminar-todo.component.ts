@@ -12,4 +12,8 @@ export class EliminarTodoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  eliminarTodo(){
+    
+  }
+
 }

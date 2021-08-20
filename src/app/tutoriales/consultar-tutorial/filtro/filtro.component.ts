@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FiltroComponent implements OnInit {
 
+  public tituloBusqueda: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  buscar(){
+
   }
 
 }

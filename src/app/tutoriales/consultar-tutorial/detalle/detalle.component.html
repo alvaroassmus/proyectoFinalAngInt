@@ -1,9 +1,9 @@
 <div class="card" style="width: 18rem;">
     <div class="card-body">
         <h5 class="card-title">Tutorial</h5>
-        <p><strong>Título:</strong> titulo</p>
-        <p><strong>Descripción:</strong> descripción</p>
-        <p><strong>Estado:</strong> estado</p>
-        <button class="btn btn-warning">Editar</button>
+        <p><strong>Título:</strong> {{tutorial.nombre}}</p>
+        <p><strong>Descripción:</strong> {{tutorial.descripcion}}</p>
+        <p><strong>Estado:</strong> {{tutorial.estado}}</p>
+        <button class="btn btn-warning" (click)="editar()">Editar</button>
     </div>
 </div>

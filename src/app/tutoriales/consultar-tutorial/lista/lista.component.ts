@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TutorialDTO } from 'src/app/modelos/tutorialDTO';
 
 @Component({
   selector: 'app-lista',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaComponent implements OnInit {
 
+  public listaTutoriales: TutorialDTO[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  verDetalle(tutorial: TutorialDTO){
+    
   }
 
 }
