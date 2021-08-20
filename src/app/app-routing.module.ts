@@ -5,13 +5,10 @@ import { CrearTutorialComponent } from './tutoriales/crear-tutorial/crear-tutori
 import { EditarTutorialComponent } from './tutoriales/editar-tutorial/editar-tutorial.component';
 
 const routes: Routes = [
-  {
-    path: '', component: ConsultarTutorialComponent,
-    children: [
-      { path: 'crear', component: CrearTutorialComponent, },
-      { path: 'editar', component: EditarTutorialComponent }
-    ]
-  }
+  { path: '', pathMatch: 'full', redirectTo: 'consultar'},
+  { path: 'consultar', component: ConsultarTutorialComponent },
+  { path: 'crear', component: CrearTutorialComponent },
+  { path: 'editar', component: EditarTutorialComponent }
 ];
 
 @NgModule({
