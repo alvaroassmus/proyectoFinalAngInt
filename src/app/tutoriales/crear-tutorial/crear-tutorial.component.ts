@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TutorialDTO } from 'src/app/modelos/tutorialDTO';
 
 @Component({
   selector: 'app-crear-tutorial',
@@ -7,17 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrearTutorialComponent implements OnInit {
 
- public tutorial = { nombre : " ", descripcion : " "  };
+ public tutorial = new TutorialDTO();
 
- 
+
  constructor() { }
 
   ngOnInit(): void {
   }
 
-  agregarTuto() : void {
-    console.log("agregando tutorItiaL!" , this.tutorial);
-    
+  agregarTutorial() : void {
+    console.log("agregando tutorial!" , this.tutorial);
   }
 
 }
