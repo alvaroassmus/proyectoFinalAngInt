@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TutorialDTO } from 'src/app/modelos/tutorialDTO';
+import { TutorialesService } from 'src/app/servicios/tutoriales.service';
 
 @Component({
   selector: 'app-detalle',
@@ -11,9 +12,13 @@ export class DetalleComponent implements OnInit {
 
   public tutorial: TutorialDTO = new TutorialDTO();
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private tutoService: TutorialesService) { }
 
   ngOnInit(): void {
+    this.tutoService.emisorTutorial.subscribe(emisor => {
+      this.tutorial = emisor;
+    });
   }
 
   editar(){

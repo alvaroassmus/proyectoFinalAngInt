@@ -11,10 +11,10 @@ export class ListaComponent implements OnInit {
 
   public listaTutoriales: TutorialDTO[] = [];
 
+  
+
   constructor(private tutoService: TutorialesService) { 
     
-
-
   }
 
   ngOnInit(): void {
@@ -24,7 +24,7 @@ export class ListaComponent implements OnInit {
   }
 
   verDetalle(tutorial: TutorialDTO){
-    
+    this.tutoService.emisorTutorial.emit(tutorial);
   }
 
 }
