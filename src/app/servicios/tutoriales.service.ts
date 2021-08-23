@@ -11,7 +11,7 @@ export class TutorialesService {
 
   public emisorTutorial: EventEmitter<TutorialDTO> = new EventEmitter<TutorialDTO>();
 
-  constructor() { 
+  constructor() {
     this.listaTutoriales.length = 0;
     let tutorial: TutorialDTO = new TutorialDTO();
     tutorial.generarData(2,'Pedro', 'Prueba', 'X');
@@ -26,14 +26,14 @@ export class TutorialesService {
   }
 
   public eliminarTutoriales(): TutorialDTO[] {
-      this.listaTutoriales.length = 0;      
+      this.listaTutoriales.length = 0;
      return this.listaTutoriales;
   }
 
   public setTutorial(tutorial: TutorialDTO): void {
     this.elementoTutorialDTO = tutorial;
   }
-  
+
   public getTutorial(): TutorialDTO {
     return this.elementoTutorialDTO;
   }
@@ -49,5 +49,12 @@ export class TutorialesService {
   public eliminarTutorial(tutorial: TutorialDTO): void {
     this.listaTutoriales.splice(this.listaTutoriales.indexOf(tutorial),1);
   }
-  
+
+  public agregarTutorial(tutorial: TutorialDTO): void {
+    this.listaTutoriales.push(tutorial);
+  }
+
+  public retornarNuevoId(): number {
+    return new Date().getTime();
+  }
 }

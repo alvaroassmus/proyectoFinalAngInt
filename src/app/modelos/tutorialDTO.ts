@@ -15,4 +15,11 @@ export class TutorialDTO extends Object{
         this.estado         = estado;
     }
 
+    public setId(nuevoId: number) : void {
+      this.id = nuevoId;
+    }
+
+    public setEstado(nuevoEstado: string) : void {
+      this.estado = nuevoEstado;
+    }
 }

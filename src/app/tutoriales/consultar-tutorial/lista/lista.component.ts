@@ -11,19 +11,20 @@ export class ListaComponent implements OnInit {
 
   public listaTutoriales: TutorialDTO[] = [];
 
-  
 
-  constructor(private tutoService: TutorialesService) { 
-    
+
+  constructor(private tutoService: TutorialesService) {
+
   }
 
   ngOnInit(): void {
     this.listaTutoriales = this.tutoService.cargarTutoriales();
     console.log(this.listaTutoriales);
-    
+
   }
 
   verDetalle(tutorial: TutorialDTO){
+    console.log('Viendo el tutorial ' + tutorial.id)
     this.tutoService.emisorTutorial.emit(tutorial);
   }
 
