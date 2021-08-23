@@ -10,6 +10,7 @@ export class TutorialesService {
   private elementoTutorialDTO: TutorialDTO = new TutorialDTO();
 
   public emisorTutorial: EventEmitter<TutorialDTO> = new EventEmitter<TutorialDTO>();
+  public filtarTutorial: EventEmitter<TutorialDTO[]> = new EventEmitter<TutorialDTO[]>();
 
   constructor() {
     this.listaTutoriales.length = 0;
@@ -57,4 +58,14 @@ export class TutorialesService {
   public retornarNuevoId(): number {
     return new Date().getTime();
   }
+
+  public filtrarLista(dato: string): void{
+    if (dato===''){
+      this.filtarTutorial.emit(this.listaTutoriales);
+    }
+    else{
+      this.filtarTutorial.emit(this.listaTutoriales.filter(tuto=> tuto.nombre.match(dato)));
+    }
+  } 
+
 }

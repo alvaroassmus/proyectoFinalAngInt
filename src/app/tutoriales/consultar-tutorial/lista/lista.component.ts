@@ -18,14 +18,15 @@ export class ListaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.listaTutoriales = this.tutoService.cargarTutoriales();
-    console.log(this.listaTutoriales);
+    this.tutoService.filtarTutorial.subscribe(tutoriales => {
+      this.listaTutoriales = tutoriales;
+    });
+     this.tutoService.filtrarLista('');
 
   }
 
   verDetalle(tutorial: TutorialDTO){
-    console.log('Viendo el tutorial ' + tutorial.id)
-    this.tutoService.emisorTutorial.emit(tutorial);
+       this.tutoService.emisorTutorial.emit(tutorial);
   }
 
 }
