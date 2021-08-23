@@ -22,6 +22,7 @@ export class DetalleComponent implements OnInit {
   }
 
   editar(){
+    this.tutoService.setTutorial(this.tutorial);
     this.router.navigate(['/editar']);    
   }
 

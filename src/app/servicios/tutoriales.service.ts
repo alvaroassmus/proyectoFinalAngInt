@@ -7,13 +7,11 @@ import { TutorialDTO } from '../modelos/tutorialDTO';
 export class TutorialesService {
 
   private listaTutoriales: TutorialDTO[] = [];
+  private elementoTutorialDTO: TutorialDTO = new TutorialDTO();
 
   public emisorTutorial: EventEmitter<TutorialDTO> = new EventEmitter<TutorialDTO>();
 
   constructor() { 
-  }
-
-  public cargarTutoriales(): TutorialDTO[] {
     this.listaTutoriales.length = 0;
     let tutorial: TutorialDTO = new TutorialDTO();
     tutorial.generarData(2,'Pedro', 'Prueba', 'X');
@@ -21,7 +19,9 @@ export class TutorialesService {
     let tutorial2: TutorialDTO = new TutorialDTO();
     tutorial2.generarData(3,'María', 'Prueba 2', 'Pendiente');
     this.listaTutoriales.push(tutorial2);
-    //TODO Hacer el metodo vagos
+  }
+
+  public cargarTutoriales(): TutorialDTO[] {
     return this.listaTutoriales;
   }
 
@@ -30,4 +30,24 @@ export class TutorialesService {
      return this.listaTutoriales;
   }
 
+  public setTutorial(tutorial: TutorialDTO): void {
+    this.elementoTutorialDTO = tutorial;
+  }
+  
+  public getTutorial(): TutorialDTO {
+    return this.elementoTutorialDTO;
+  }
+
+  public actualizarTutorial(tutorial: TutorialDTO): void {
+    this.listaTutoriales.find(bTuto => {
+      if(bTuto.id === tutorial.id) {
+        bTuto = tutorial;
+      }
+    });
+  }
+
+  public eliminarTutorial(tutorial: TutorialDTO): void {
+    this.listaTutoriales.splice(this.listaTutoriales.indexOf(tutorial),1);
+  }
+  
 }
